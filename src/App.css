@@ -1,0 +1,172 @@
+:root {
+  --nidec-green: #008f39;
+  --nidec-dark: #006629;
+  --nidec-light: #e8f5e9;
+  --text-main: #2c3e50;
+  --text-muted: #7f8c8d;
+  --white: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f9fa; /* Gris muy claro de fondo para que resalten las tarjetas */
+  color: var(--text-main);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header Corporativo */
+.header {
+  background-color: var(--white);
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+.header h1 {
+  margin: 0;
+  color: var(--nidec-green);
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+
+/* Barra de Navegación Superior */
+.nav-top {
+  background-color: var(--nidec-green);
+  color: var(--white);
+  display: flex;
+  padding: 0 40px;
+  gap: 30px;
+}
+
+.nav-item {
+  padding: 15px 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.9;
+  transition: opacity 0.3s, border-bottom 0.3s;
+  border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover {
+  opacity: 1;
+  border-bottom: 3px solid var(--white);
+}
+
+/* Layout Principal */
+.main-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar Estilizado */
+.sidebar {
+  width: 280px;
+  background-color: var(--white);
+  border-right: 1px solid #e0e0e0;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-nidec {
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid transparent;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+}
+
+.btn-nidec:hover {
+  background-color: var(--nidec-light);
+  color: var(--nidec-green);
+}
+
+.btn-nidec.active {
+  background-color: var(--nidec-green);
+  color: var(--white);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 143, 57, 0.2);
+}
+
+/* Área de Contenido */
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+/* Tarjetas (Forms y Gráficos) */
+.card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Inputs Profesionales */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-main);
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  font-size: 15px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--nidec-green);
+  box-shadow: 0 0 0 3px rgba(0, 143, 57, 0.1);
+}
+
+/* Botones de Acción */
+.btn-accion {
+  background-color: var(--nidec-green);
+  color: var(--white);
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.btn-accion:hover {
+  background-color: var(--nidec-dark);
+}
+
+.btn-accion:active {
+  transform: scale(0.98);
+}
